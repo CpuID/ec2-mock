@@ -2,7 +2,7 @@ FROM golang:1.9.4-alpine3.6
 MAINTAINER Nathan Sullivan <nathan@nightsys.net>
 RUN apk add --no-cache git
 WORKDIR /go/src/app
-COPY . .
+COPY *.go ./
 RUN go get -d -v ./...
 RUN go install -v ./...
 
