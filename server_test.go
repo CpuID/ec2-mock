@@ -10,7 +10,7 @@ import (
 )
 
 func TestRootDescribeTags(t *testing.T) {
-	expected_body := `<DescribeTagsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/"/">
+	expected_body := `<DescribeTagsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
    <requestId>7a62c49f-347e-4fc4-9331-6e8e</requestId>
    <tagSet>
       <item>
