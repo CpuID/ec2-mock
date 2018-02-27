@@ -1,5 +1,7 @@
 *ec2-mock*
 
+[![Build Status](https://travis-ci.org/CpuID/ec2-mock.svg?branch=master)](https://travis-ci.org/CpuID/ec2-mock)
+
 # Summary
 
 Initially this just mocks out the [DescribeTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTags.html) API action.
