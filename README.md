@@ -8,6 +8,8 @@ Initially this just mocks out the [DescribeTags](https://docs.aws.amazon.com/AWS
 
 Other endpoints may follow in future.
 
+Motivation for this was testing "infrastructure as code" builds (eg. Packer image provisioners) that talk to the EC2 API and fetch tags to perform other tasks, in a locally mocked environment.
+
 # Usage
 
 Any environment variables named with a prefix of `TAG__` will be propagated through, with the environment naming syntax as follows:
@@ -43,3 +45,11 @@ $ aws --endpoint http://localhost:33333 ec2 describe-tags [--filters "..."]
     ]
 }
 ```
+
+# Docker Images
+
+Git SHA tagged builds on the [Docker Hub](https://hub.docker.com/r/cpuid/ec2-mock/tags/)
+
+# License
+
+MIT
