@@ -1,6 +1,6 @@
 *ec2-mock*
 
-[![Build Status](https://travis-ci.org/CpuID/ec2-mock.svg?branch=master)](https://travis-ci.org/CpuID/ec2-mock)
+[![Build Status](https://travis-ci.org/CpuID/ec2-mock.svg?branch=master)](https://travis-ci.org/CpuID/ec2-mock) [![Coverage Status](https://coveralls.io/repos/github/CpuID/ec2-mock/badge.svg?branch=master)](https://coveralls.io/github/CpuID/ec2-mock?branch=master)
 
 # Summary
 
