@@ -1,8 +1,0 @@
-#!/bin/bash
-
-docker build -f $DOCKERFILE_PATH -t $IMAGE_NAME .
-
-echo "SOURCE_COMMIT: ${SOURCE_COMMIT}"
-echo "--------------"
-env
-echo "--------------"
