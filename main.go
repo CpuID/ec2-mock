@@ -21,12 +21,13 @@ func parseTagEnvVars() (InstanceTags, error) {
 	result := make(InstanceTags)
 	for _, e := range os.Environ() {
 		pair := strings.Split(e, "=")
-		if pair[0][0:5] == "TAG__" {
+		if len(pair[0]) > 5 && pair[0][0:5] == "TAG__" {
 			split_key := strings.Split(pair[0], "__")
 			if len(split_key) != 3 {
 				return InstanceTags{}, fmt.Errorf("Invalid format for '%s' environment variable key. Must be in the format of 'TAG__instanceid__tagname'")
 			}
-			result[split_key[1]] = append(result[split_key[1]], InstanceTag{
+			use_instance_id := strings.Replace(split_key[1], "_", "-", 1)
+			result[use_instance_id] = append(result[use_instance_id], InstanceTag{
 				Key:   split_key[2],
 				Value: pair[1],
 			})

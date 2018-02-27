@@ -12,10 +12,12 @@ Any environment variables named with a prefix of `TAG__` will be propagated thro
 
 `TAG__instanceid__tagname`
 
+With instanceid in the format of `i_asdfasdf` (`i-asdfasdf` with `-` substituted for `_`).
+
 Example:
 
 ```
-docker run -it -e "TAG__i-asdfasdf__BLAH=asdf" -e "TAG__i-aaaabbbb__aaaa=zzzz" -p 33333:33333 --rm cpuid/ec2-mock:latest
+docker run -it -e "TAG__i_asdfasdf__BLAH=asdf" -e "TAG__i_aaaabbbb__aaaa=zzzz" -p 33333:33333 --rm cpuid/ec2-mock:latest
 ```
 
 Then, to query:
