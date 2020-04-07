@@ -8,8 +8,10 @@ import (
 )
 
 type Server struct {
-	Port uint64
-	Tags InstanceTags
+	Port              uint64
+	AvailabilityZones AvailabilityZones
+	Instances         Instances
+	Tags              InstanceTags
 }
 
 func (s *Server) Start() {

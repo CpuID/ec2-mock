@@ -9,14 +9,6 @@ import (
 	"gopkg.in/urfave/cli.v1"
 )
 
-// Key = Instance ID
-type InstanceTags map[string][]InstanceTag
-
-type InstanceTag struct {
-	Key   string
-	Value string
-}
-
 func parseTagEnvVars() (InstanceTags, error) {
 	result := make(InstanceTags)
 	for _, e := range os.Environ() {
